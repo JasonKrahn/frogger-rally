@@ -1760,7 +1760,7 @@ Frogger.Character = (function(Frogger) {
             move(Frogger.direction.LEFT);
         } else if (touchLeft > (6 * Frogger.drawingSurfaceWidth / 16)) {
             move(Frogger.direction.RIGHT);
-        } else if (touchTop < (Frogger.drawingSurfaceHeight / 2)) {
+        } else if (touchTop < (Frogger.drawingSurfaceHeight / 3)) {
             move(Frogger.direction.UP);
         } else if (touchTop > (6 * Frogger.drawingSurfaceHeight / 16)) {
             move(Frogger.direction.DOWN);
