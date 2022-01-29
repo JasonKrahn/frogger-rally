@@ -1,4 +1,6 @@
 // Define a namespace to contain the code for our game within a single global variable
+
+
 var Frogger = (function() {
 
     // Locate the main <canvas> element on the page
@@ -42,6 +44,7 @@ var Frogger = (function() {
         // application-wide communication without the need for tightly-coupled modules. See
         // Chapter 5 for more information on this design pattern.
         observer: (function() {
+
             var events = {};
 
             return {
@@ -1714,6 +1717,9 @@ Frogger.Character = (function(Frogger) {
 
     // When the player presses the arrow keys on the keyboard, move the player's
     // character in the appropriate direction on the game board
+
+
+
     window.addEventListener("keydown", function(event) {
 
         // Define the key codes for the arrow keys
@@ -1735,6 +1741,7 @@ Frogger.Character = (function(Frogger) {
         }
     }, false);
 
+
     // When the player taps in certain places on the game board on their touch-sensitive
     // screen, move the player's character in the appropriate direction on the game board
     // according to where the screen has been tapped. This is useful since users with
@@ -1749,13 +1756,13 @@ Frogger.Character = (function(Frogger) {
 
         // Execute the move() function, passing along the correct direction based on the
         // position tapped on the game board
-        if (touchLeft < (Frogger.drawingSurfaceWidth / 8)) {
+        if (touchLeft < (Frogger.drawingSurfaceWidth / 16)) {
             move(Frogger.direction.LEFT);
-        } else if (touchLeft > (3 * Frogger.drawingSurfaceWidth / 8)) {
+        } else if (touchLeft > (6 * Frogger.drawingSurfaceWidth / 16)) {
             move(Frogger.direction.RIGHT);
-        } else if (touchTop < (Frogger.drawingSurfaceHeight / 8)) {
+        } else if (touchTop < (Frogger.drawingSurfaceHeight / 2)) {
             move(Frogger.direction.UP);
-        } else if (touchTop > (3 * Frogger.drawingSurfaceHeight / 8)) {
+        } else if (touchTop > (6 * Frogger.drawingSurfaceHeight / 16)) {
             move(Frogger.direction.DOWN);
         }
     }, false);
