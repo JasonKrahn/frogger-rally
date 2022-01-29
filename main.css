@@ -10,20 +10,21 @@
 }
 body {
   background-color: #2d2d2d;
-  touch-action: manipulation;
+
 }
 
 main {
+
   display: flex;
   height: 100vh;
-
+  width: 100vw;
   justify-content: center;
   align-items: center;
 }
 
 .canvas {
   position: absolute;
-
+  touch-action: manipulation;
   max-height: 100%;
   max-width: 100%;
   min-width: 350px;
